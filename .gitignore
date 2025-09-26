@@ -1,0 +1,13 @@
+node_modules
+dist
+coverage
+.DS_Store
+.cursor
+.roo
+.ai-rules
+test-*
+*.log
+*.tgz
+.env
+.env.*
+!.env.example

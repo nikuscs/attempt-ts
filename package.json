@@ -1,0 +1,67 @@
+{
+  "name": "attempt-ts",
+  "version": "0.1.0",
+  "description": "🎯 Robust error handling and retry utilities for TypeScript",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "bun run typecheck && bun run lint && rolldown -c && tsc --project tsconfig.build.json",
+    "dev": "rolldown -c --watch",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint src tests",
+    "lint:fix": "oxlint src tests --fix",
+    "format": "oxlint src tests --fix",
+    "check": "bun run typecheck && bun run lint && bun run test",
+    "taze": "bunx taze",
+    "prepublishOnly": "bun run check && bun run build"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "error-handling",
+    "retry",
+    "typescript",
+    "utilities",
+    "promise",
+    "async",
+    "result-type"
+  ],
+  "author": "Jon <jon@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jon/attempt-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jon/attempt-ts/issues"
+  },
+  "homepage": "https://github.com/jon/attempt-ts#readme",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^24.5.2",
+    "@types/retry": "^0.12.5",
+    "@vitest/ui": "^3.2.4",
+    "oxlint": "^1.17.0",
+    "rolldown": "^0.14.0",
+    "vitest": "^3.2.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "p-retry": "^7.0.0",
+    "retry": "^0.13.1"
+  }
+}
