@@ -2,14 +2,15 @@
   "name": "attempt-ts",
   "version": "0.1.0",
   "description": "🎯 Robust error handling and retry utilities for TypeScript",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "type": "module",
   "exports": {
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     }
+  },
+  "engines": {
+    "node": ">=18"
   },
   "scripts": {
     "build": "bun run typecheck && bun run lint && rolldown -c && tsc --project tsconfig.build.json",
@@ -38,16 +39,16 @@
     "async",
     "result-type"
   ],
-  "author": "Jon <jon@example.com>",
+  "author": "Pedro Martins <hi@nikuscs.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jon/attempt-ts.git"
+    "url": "https://github.com/nikuscs/attempt-ts.git"
   },
   "bugs": {
-    "url": "https://github.com/jon/attempt-ts/issues"
+    "url": "https://github.com/nikuscs/attempt-ts/issues"
   },
-  "homepage": "https://github.com/jon/attempt-ts#readme",
+  "homepage": "https://github.com/nikuscs/attempt-ts#readme",
   "devDependencies": {
     "@types/bun": "latest",
     "@types/node": "^24.5.2",

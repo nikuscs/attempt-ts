@@ -6,7 +6,8 @@ export default defineConfig({
     dir: 'dist',
     format: 'esm',
     preserveModules: true,
-    preserveModulesRoot: 'src'
+    preserveModulesRoot: 'src',
+    target: 'esnext'
   },
   external: ['p-retry', 'retry'],
   resolve: {
